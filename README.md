@@ -22,5 +22,5 @@ the container for example like this:
     docker run -d \
         --name my_coturn \
         -v /var/lib/coturn/turnserver.conf:/etc/turnserver/turnserver.conf:ro,z \
-        -p 3478:3478 -p 5349 \
+        -p 3478:3478 -p 5349:5349 \
         dockingbay/fedora-coturn

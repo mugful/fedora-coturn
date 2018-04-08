@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:26
+FROM registry.fedoraproject.org/fedora:27
 MAINTAINER Jiri Stransky <jistr@jistr.com>
 
 RUN yum -y update; yum clean all
@@ -10,6 +10,6 @@ COPY files /
 
 EXPOSE 3478 5349
 
-USER turnserver
+USER coturn
 
 CMD ["/usr/local/bin/container_coturn"]
