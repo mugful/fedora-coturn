@@ -3,12 +3,18 @@ fedora-coturn
 
 A Coturn TURN server image built on top of Fedora.
 
-Build
------
+Pull
+----
 
-    git clone https://github.com/dockingbay/fedora-coturn
+Either pull from Quay.io:
+
+    docker pull quay.io/mugful/fedora-coturn:master
+
+Or build your own:
+
+    git clone https://github.com/mugful/fedora-coturn
     cd fedora-coturn
-    docker build --force-rm -t dockingbay/fedora-coturn:latest .
+    docker build --force-rm -t mugful/fedora-coturn:master .
 
 Run
 ---
@@ -23,4 +29,4 @@ the container for example like this:
         --name my_coturn \
         -v /var/lib/coturn/turnserver.conf:/etc/turnserver/turnserver.conf:ro,z \
         -p 3478:3478 -p 5349:5349 \
-        dockingbay/fedora-coturn
+        quay.io/mugful/fedora-coturn:master
